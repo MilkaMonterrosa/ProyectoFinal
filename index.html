@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link type="text/css" rel="stylesheet" media="screen" href="estilo.css">
+        <title>Proyecto final</title>
+        <script src="script.js"></script>
+    </head>
+    
+    <body style="font-family: arial,helvética, courier;">
+        <div id="site">
+            <div id="header">
+                <div id="header-left">
+                </div>
+                
+                <div id="header-right" style="text-align: center">
+                    <a href="Index.html"><h1 style="color: #05D1D1; margin-top: 5px; font-size: 50px">México cre<span style="color:#FDF959; font-family:courier, Brush Script MT">ARTE</span></h1></a>
+                
+                </div>
+            </div>
+            <div id="menu">
+                <div class='topnav'>
+                    <a href="Cine.html">Cine</a>
+                    <a href="Artes.html">Artes plásticas</a>
+                    <a href="Musica.html">Música</a>
+                    <a href="Teatro.html">Teatro</a>
+                </div>
+            
+            </div>
+                
+            <div id="body-main">
+                <h1 style="text-align: center; margin-top: 50px">¿Qué es México creARTE?</h1>
+                <div id="body-l">
+                    <div><img src="main/main.png" width="700px"></div>
+                </div>
+                <div id="body-r" style="text-align: justify">
+                    <br>
+                    <p>Una página de mexicanos para mexicanos donde encontrarás la información más reciente y los artículos más relevantes sobre música, teatro, cine y artes plásticas. México CreARTE es el espacio donde tú como artista podrás explorar y conocer el mundo artístico dentro de México, sin la necesidad de salir de casa. Con México CreARTE existe una  infinidad de posibilidades para que las personas que quieran conocer nuevos exponentes artísticos puedan hacerlo mediante esta página, ya que hay muchas disciplinas artísticas por elegir y explorar. Además podrás compartir tus experiencias y generar una comunidad de personas que les guste lo mismo que a tí.</p>
+                    <br>
+                    <p>Hay un problema en México que es muy grave, ya que hoy en día no se le da la importancia necesaria a los nuevos artistas mexicanos; es por ello que el objetivo de ésta página es dar a conocer la creatividad de una forma que nunca se ha visto, explorando todos los rincones de México,  valorando su cultura y su arte para así crear un país mucho más artístico que nunca. Ven y conoce México CreARTE</p>
+  
+                </div>
+            
+            </div>
+            <div id="footer" style="text-align: center">
+                <div id="foot-left" style="text-align: center"><img src="Logo.jpg" width="230" height="140" alt="No se encontró la imagen" title="Logo" style="margin-top: 70px" ></div>
+                
+                <div id="foot-center" style="text-align: center">
+                    <p style="margin-top: 100px"><b>SÍGUENOS</b></p><br>
+                    <div><a href="https://www.facebook.com"><img src="fb.png" width="30px" height="30px"></a>&nbsp;&nbsp; <a href="https://www.instagram.com"><img src="ig.png" width="30px" height="30px"></a>&nbsp;&nbsp; <a href="https://www.twitter.com"><img src="twiterr.png" width="30px" height="30px"></a></div>
+                </div>
+                <div id="foot-right" style="text-align: center">
+                    <div class="wrapper" style="margin-top: 20px; text-align: center">
+                        <p><b>CONTÁCTANOS</b></p>
+                        <br>
+                        <div id="Error"></div>
+                        
+                        <form id="myform" onsubmit="return validation()">
+                            <div class="input_field">
+                                <input type="text" placeholder="Nombre" id="name">
+                            </div>
+                            <div class="input_field">
+                                <input type="text" placeholder="E-mail" id="mail">
+                            </div>
+                            <div class="input_field">
+                                <textarea id="message" placeholder="Mensaje"></textarea>
+                            </div>
+                            <div class="btn">
+                                <input type="submit">
+                            </div>
+                            
+                            
+                        </form>
+                    </div>
+                </div>
+                <p> ©2020 México CreARTE</p>
+            </div>
+        
+        
+        
+        </div>
+        
+        <script type="text/javascript">
+            function validation(){
+                var name = document.getElementById("name").value;
+                var mail = document.getElementById("mail").value;
+                var message = document.getElementById("message").value;
+                var Error = document.getElementById("Error");
+                var text;
+
+                Error.style.padding="10px";
+
+                if(name.length <1){
+                    text = "Por favor introduzca un nombre válido";
+                    Error.innerHTML = text;
+                    return false;
+                }
+
+                if(mail.indexOf("@")==-1 || mail.length <6){
+                    text = "Por favor introduzca un E-Mail válido";
+                    Error.innerHTML = text;
+                    return false;
+                }
+
+                if(message.length <= 140){
+                    text = "Por favor introduzca más de 140 caracteres en el mensaje";
+                    Error.innerHTML = text;
+                    return false;
+                }
+
+                alert("Enviado correctamente. Te contactaremos en brevedad")
+                return true;
+            }
+        
+        
+        </script>
+    
+    </body>
+
+</html>
